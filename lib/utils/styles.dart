@@ -19,11 +19,11 @@ abstract class AppStyle {
     fontWeight: FontWeight.w500,
   );
 
-  static const subHeadingText = TextStyle(
+  static const numpadText = TextStyle(
     color: Color.fromRGBO(0, 0, 0, 1),
-    fontFamily: 'Monsterrat',
+    fontFamily: 'OpenSans',
     fontSize: 18,
     fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.normal,
   );
 }

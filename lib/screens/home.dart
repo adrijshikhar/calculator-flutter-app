@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../utils/profileCipper.dart';
+import '../utils/calculatorKey.dart';
 import '../utils/styles.dart';
 
 class HomePage extends StatefulWidget {
@@ -9,6 +9,25 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<String> calculatorKeysData = const [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16"
+  ];
+
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(
@@ -29,6 +48,8 @@ class _HomePageState extends State<HomePage> {
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: AppBar(
+                    backgroundColor: Colors.white,
+                    brightness: Brightness.light,
                     title: Text(
                       "Calculator",
                       style: AppStyle.headingText,
@@ -67,7 +88,7 @@ class _HomePageState extends State<HomePage> {
           Container(
             width: ScreenUtil.screenWidthDp,
             height: ScreenUtil.screenWidthDp,
-            color: Colors.blue,
+            color: Colors.white,
             child: Container(
               child: GridView.count(
                 primary: false,
@@ -75,86 +96,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisSpacing: 0,
                 crossAxisCount: 4,
                 children: <Widget>[
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('He\'d have you all unravel at the'),
-                    color: Colors.teal[100],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Heed not the rabble'),
-                    color: Colors.teal[200],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Sound of screams but the'),
-                    color: Colors.teal[300],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Who scream'),
-                    color: Colors.teal[400],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Revolution is coming...'),
-                    color: Colors.teal[500],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Revolution, they...'),
-                    color: Colors.teal[600],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('He\'d have you all unravel at the'),
-                    color: Colors.teal[100],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Heed not the rabble'),
-                    color: Colors.teal[200],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Sound of screams but the'),
-                    color: Colors.teal[300],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Who scream'),
-                    color: Colors.teal[400],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Revolution is coming...'),
-                    color: Colors.teal[500],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Revolution, they...'),
-                    color: Colors.teal[600],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('He\'d have you all unravel at the'),
-                    color: Colors.teal[100],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Heed not the rabble'),
-                    color: Colors.teal[200],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Sound of screams but the'),
-                    color: Colors.teal[300],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    child: const Text('Who scream'),
-                    color: Colors.teal[400],
-                  ),
+                  ...calculatorKeysData
+                      .map((keyData) => CalculatorKey(
+                            labelText: keyData,
+                          ))
+                      .toList(),
                 ],
               ),
             ),
