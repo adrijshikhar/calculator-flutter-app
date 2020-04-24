@@ -35,8 +35,6 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   # assets_location
-  assets:
-    - assets/images/
   #fonts
   fonts:
     - family: Monsterrat
