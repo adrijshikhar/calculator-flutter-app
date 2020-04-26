@@ -22,7 +22,7 @@ abstract class AppStyle {
   static const numpadText = TextStyle(
     color: Color.fromRGBO(0, 0, 0, 1),
     fontFamily: 'OpenSans',
-    fontSize: 18,
+    fontSize: 28,
     fontStyle: FontStyle.normal,
     fontWeight: FontWeight.normal,
   );

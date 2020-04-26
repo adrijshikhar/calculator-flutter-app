@@ -90,6 +90,14 @@ class _HomePageState extends State<HomePage> {
             height: ScreenUtil.screenWidthDp,
             color: Colors.white,
             child: Container(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                    blurRadius: 20.0,
+                  ),
+                ],
+              ),
               child: GridView.count(
                 primary: false,
                 crossAxisSpacing: 0,
