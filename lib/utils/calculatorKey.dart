@@ -11,6 +11,7 @@ class CalculatorKey extends StatelessWidget {
     return Container(
       child: Center(
         child: Material(
+          animationDuration: Duration(seconds: 20),
           color: Colors.white,
           child: InkWell(
             onTap: () {},
